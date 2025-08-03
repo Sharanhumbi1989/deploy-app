@@ -9,17 +9,6 @@ jobs:
      steps:
          - name: Checkout code
            uses: actions/checkout@v4
-         
-         - name: setup Node.js
-           uses: actions/setup-node@v4
-           with:
-               Node-version: '18'
-
-         - name: INstall dependencies
-           run: npm install
-
-         - name: Rub build
-           run: npm run build
 
          - name: Deploy
            run: echo "Deployment success"     
