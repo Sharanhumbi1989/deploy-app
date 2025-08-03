@@ -1,0 +1,26 @@
+name: deploy-app
+on:
+   push:
+       braches:
+         - main
+jobs:
+   build:
+     runs-on: ubuntu-latest
+     steps:
+         - name: Checkout code
+           uses: actions/checkout@v4
+         
+         - name: setup Node.js
+           uses: actions/setup-node@v4
+           with:
+               Node-version: '18'
+
+         - name: INstall dependencies
+           uses: npm install
+
+         - name: Rub build
+           uses: npm run build
+
+         - name: Deploy
+           uses: echo "Deployment success"     
+
