@@ -16,11 +16,11 @@ jobs:
                Node-version: '18'
 
          - name: INstall dependencies
-           uses: npm install
+           run: npm install
 
          - name: Rub build
-           uses: npm run build
+           run: npm run build
 
          - name: Deploy
-           uses: echo "Deployment success"     
+           run: echo "Deployment success"     
 
